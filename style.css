@@ -1,0 +1,136 @@
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-gray);
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  display: block;
+}
+
+.main-container {
+  height: 80vh;
+  max-width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* align-items: center;
+  justify-content: center; */
+  margin: auto;
+  margin-top: 2rem;
+}
+.card {
+  padding: 3rem;
+  border: none;
+}
+
+.card-1 {
+  background-color: var(--orange);
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.card-2 {
+  background-color: var(--cyan);
+}
+.card-3 {
+  background-color: var(--dark-cyan);
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  font-size: 3rem;
+  color: var(--light-gray);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+p {
+  color: var(--light-gray);
+  margin-bottom: 5rem;
+}
+
+.card-1 a {
+  color: var(--orange);
+}
+.card-2 a {
+  color: var(--cyan);
+}
+.card-3 a {
+  color: var(--dark-cyan);
+}
+
+.btn-1,
+.btn-2,
+.btn-3 {
+  display: inline-block;
+  padding: 1rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  background-color: var(--light-gray);
+}
+
+.btn-1:hover {
+  border: 2px solid white;
+  background-color: var(--orange);
+  color: white;
+}
+.btn-2:hover {
+  border: 2px solid white;
+  background-color: var(--cyan);
+  color: white;
+}
+.btn-3:hover {
+  border: 2px solid white;
+  background-color: var(--dark-cyan);
+  color: white;
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .main-container {
+    height: 80vh;
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  .card-1 {
+    background-color: var(--orange);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0;
+  }
+  .card-2 {
+    background-color: var(--cyan);
+  }
+  .card-3 {
+    background-color: var(--dark-cyan);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0;
+  }
+}
