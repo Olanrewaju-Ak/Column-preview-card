@@ -85,7 +85,7 @@ p {
   display: inline-block;
   padding: 1rem;
   transition: all 0.5s;
-  border: none;
+  border-radius: 30px;
   cursor: pointer;
   background-color: var(--light-gray);
 }
